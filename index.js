@@ -6,24 +6,29 @@ var clc = require('cli-color');
 
 var targetDir = './repos/';
 
+//output colors;
+var error = clc.red;
+var notice = clc.blue;
+var warning = clc.yellow;
 
-// remove directory
+// remove directory;
 rimraf(targetDir, function(err) {
-    if (err) console.log(err);
+    if (err) console.log(error(err));
 });
 
 // clone all users repo
 github.request({
-    path: "/users/AKQADC/repos"
+    path: "/users/scullum/repos"
 }, function(err, repos) {
-    if (err) console.log(err);
+    if (err) console.log(error(err));
     _.each(repos, function(data) {
-        clone(data.clone_url, targetDir + data.name, {}, function(err) {
+    	var name = data.name;
+        clone(data.clone_url, targetDir + name, {}, function(err) {
             if (err) {
-                console.log(err);
-                return;
+                console.log(error(err));
+                // return;
             }
-            console.log(clc.red(data.name) + ' clone has completed');
+            console.log(notice(name) + ' clone has completed');
             console.log('****************');
         });
     });
