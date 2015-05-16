@@ -4,7 +4,7 @@ var clone = require('git-clone');
 var rimraf = require('rimraf');
 var clc = require('cli-color');
 
-var targetDir = './repos/';
+var targetDir = './output/';
 
 //output colors;
 var error = clc.red;
