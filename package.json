@@ -2,8 +2,8 @@
   "name": "clone-util",
   "version": "1.0.0",
   "description": "A small utility to clone a github user's public repos.",
-"repository":"",  
-"main": "clone-util.js",
+  "repository": "",
+  "main": "clone-util.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
