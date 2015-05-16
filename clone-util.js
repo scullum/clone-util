@@ -9,7 +9,6 @@ var targetDir = './output/';
 //output colors;
 var error = clc.red;
 var notice = clc.blue;
-var warning = clc.yellow;
 
 // remove directory;
 rimraf(targetDir, function(err) {
