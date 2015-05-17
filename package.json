@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cli-color": "^1.0.0",
+    "chalk": "^1.0.0",
     "git-clone": "^0.1.0",
     "github-request": "^1.2.3",
     "lodash": "^3.8.0",

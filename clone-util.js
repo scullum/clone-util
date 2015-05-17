@@ -2,17 +2,18 @@ var _ = require("lodash");
 var github = require("github-request");
 var clone = require('git-clone');
 var rimraf = require('rimraf');
-var clc = require('cli-color');
+var chalk = require('chalk');
 
 var targetDir = './output/';
 
 //output colors;
-var error = clc.red;
-var notice = clc.blue;
+var error = chalk.bgRed;
+var notice = chalk.bgBlue;
 
 // remove directory;
 rimraf(targetDir, function(err) {
   if (err) console.log(error(err));
+  else console.log(notice('Removing old clones!')+"\n");
 });
 
 // clone all users repo
