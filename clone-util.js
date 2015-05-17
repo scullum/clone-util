@@ -1,10 +1,9 @@
-var _ = require("lodash");
-var github = require("github-request");
+var _ = require('lodash');
+var github = require('github-request');
 var clone = require('git-clone');
 var rimraf = require('rimraf');
 var chalk = require('chalk');
 
-var targetDir = './output/';
 
 //output colors;
 var error = chalk.bgRed;
